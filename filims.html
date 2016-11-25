@@ -1,0 +1,78 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sanchez"/>
+  
+  <style>
+    .w3-tangerine {
+      font-family: 'Sanchez', serif;
+    }
+  </style>
+</head>
+<body onload="load()">
+  <div class="title">
+    <a href="index.html">
+      <h1 class="w3-tangerine" style="letter-spacing:3px;font-size:30px;">VISUALEYES</h1>
+      <p class="w3-tangerine" style="font-size:14px;">HAND MADE MOTION PICTURES</p>
+    </a>
+  </div>
+  <div class="nav">
+<ul>
+  <li><a href="albums.html">Pictures</a></li>
+  <li><a href="filims.html">Filims</a></li>
+  <li><a href="contactus.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#about">Blog</a></li>
+</ul>
+  </div>
+  <div class="container" style=""> 
+  <div class="slideshow" style="">
+  
+  
+  
+ <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function load(){
+  showDivs(1);
+}
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+    
+ <iframe class="mySlides" src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" style="width:100vw;height:80vh" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe class="mySlides" src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" style="width:100vw;height:80vh" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe class="mySlides" src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" style="width:100vw;height:80vh" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+  <a class="w3-display-left" style="margin-top:20vh;" onclick="plusDivs(-1)" href="#">
+    <img src="images/left-arrow.png" style="width:3vw;" />
+  </a>
+  <a class="w3-display-right" style="margin-top:20vh" onclick="plusDivs(1)" href="#">
+    <img src="images/right-arrow.png" style="width:5vw"/>
+  </a>
+
+
+
+    </div>
+    <div class="horizontal-videos" style="">
+  <iframe src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" width="60%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+     <iframe src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" width="60%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/172610311?autoplay=0&title=0&byline=0&portrait=0" width="60%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+  
+</body>
+</html>

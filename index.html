@@ -1,0 +1,80 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sanchez"/>
+ 
+</head>
+<body onload="load()">
+  <div class="title">
+    <a href="index.html">
+    <br><br><br><br>
+      <h1 class="title-font" style="letter-spacing:3px;font-size:30px;"><b>VISUALEYES</b></h1>
+      <p class="title-font" style="font-size:14px;">HAND MADE MOTION PICTURES</p>
+    </a>
+  </div>
+  <div class="nav">
+  
+<ul class="menu">
+  <li><a href="albums.html">Pictures</a></li>
+  <li><a href="films.html">Films</a></li>
+  <li><a href="contactus.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#about">Blog</a></li>
+</ul>
+  </div>
+  <div class="container" style="position:relative"> 
+  <div class="slideshow" style="position:absolute">
+  
+  
+  
+ <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function load(){
+  plusDivs(0);
+}
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+    
+  <img class="mySlides" src="images/image1.jpg" style="width:100vw;height:80vh;">
+  <img class="mySlides" src="images/image2.jpg" style="width:100vw;height:80vh;">
+  <img class="mySlides" src="images/image3.jpg" style="width:100vw;height:80vh;">
+  <img class="mySlides" src="images/image4.jpg" style="width:100vw;height:80vh;">
+
+  <a class="w3-display-left left-arrow" style="margin-top:-10vh;" onclick="plusDivs(-1)">
+    <img src="images/left-arrow.png" style="width:2vw;" />
+  </a>
+  <a class="w3-display-right right-arrow" style="margin-top:-10vh" onclick="plusDivs(1)">
+    <img src="images/right-arrow.png" style="width:3.5vw"/>
+  </a>
+
+
+
+    </div>
+  <a href="contactus.html"><div id="always-on-bottom">
+        <div class="footer"><center>Locate Us</center></div>
+  </div></a>
+  <div class="horizontal-images" style="position:absolute">
+       <img class="" src="images/image1.jpg" style="width:100vw;height:50vh;">
+      <img class="" src="images/image2.jpg" style="width:100vw;height:50vh;">
+      <img class="" src="images/image3.jpg" style="width:100vw;height:50vh;">
+      <img class="" src="images/image4.jpg" style="width:100vw;height:80vh;">
+  </div>
+  </div>
+  
+</body>
+</html>

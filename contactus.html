@@ -1,0 +1,126 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sanchez"/>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_3W1myTOyt1ChofRw4E1B0");
+   })();
+   
+   
+</script>
+</head>
+<body>
+    <div class="title">
+    <a href="index.html">
+    <br><br><br><br>
+        <h1 class="title-font" style="letter-spacing:3px;font-size:30px;"><b>VISUALEYES</b></h1>
+      <p class="title-font" style="font-size:14px;">HAND MADE MOTION PICTURES</p>
+    </a>
+  </div>
+  <div class="nav">
+  
+<ul class="menu">
+  <li><a href="albums.html">Pictures</a></li>
+  <li><a href="films.html">Films</a></li>
+  <li><a href="contactus.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#about">Blog</a></li>
+</ul>
+  </div>
+  
+    <div class="container" style="position:relative"> 
+  <div class="slideshow" style="position:absolute">
+  </div>
+  </div>
+  <div class="contacts">
+    <div class="form">
+  <form action="#">
+
+  <header>
+    <h3>We Loved To Hear From You</h3>
+  </header>
+  
+  <div>
+    <label class="desc1" id="title1" for="Field1">Full Name</label>
+    <div>
+      <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc1" id="title3" for="Field3">
+      Email
+    </label>
+    <div>
+      <input id="email" name="email" type="email" spellcheck="false" maxlength="255" tabindex="3"> 
+   </div>
+  </div>
+    
+  <div>
+    <label class="desc1" id="title4" for="Field4">
+      Message
+    </label>
+  
+    <div>
+      <textarea id="message" name="messgae" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    </div>
+  </div>
+  
+  <div>
+    <fieldset style="border:0px;">
+      <legend id="title6" class="desc1">
+        Intrested In ? 
+      </legend>
+      <div>
+      <div>
+      	<input id="wedding" name="wedding" type="checkbox" value="Wedding" tabindex="8">
+      	<label class="choice" for="wedding">Wedding Photography</label>
+      </div>
+      <div>
+      	<input id="pre-wedding" name="pre-wedding" type="checkbox" value="Pre Wedding Shoot" tabindex="9">
+      	<label class="choice" for="pre-wedding">Pre Wedding Photography</label>
+      </div>
+      <div>
+      	<input id="adv" name="adv" type="checkbox" value="Adv Films" tabindex="10">
+      	<label class="choice" for="adv">Adv Films</label>
+      </span>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div>
+		<div>
+  		<input onclick="sendMail(); return false" id="saveForm" name="saveForm" type="submit" value="Submit">
+    </div>
+	</div>
+  
+</form>
+  </div>
+    <div id="map" style="width:30vw;height:40vh;margin-top:-60vh;"></div>
+   
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 17.423798, lng: 78.457405},
+          zoom: 15
+        });
+      }
+    </script>
+<script>
+function sendMail() {
+
+emailjs.send("gmail","template_znjE97Na",{name: document.getElementById("email").value, notes: document.getElementById("message").value});
+}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpfSVEgkIVqmY2n8BqNTiFAN3U7B7lLE&callback=initMap"
+    async defer></script>
+
+
+  </div>
+  
+</body>
+</html>
